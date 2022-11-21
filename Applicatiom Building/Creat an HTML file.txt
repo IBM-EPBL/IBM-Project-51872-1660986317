@@ -1,0 +1,130 @@
+<html>
+<head>
+  <title>Digit Recognition WebApp</title>
+  <meta name="viewport" content="width=device-width">  
+<script>
+    function preview() {
+      frame.src=URL.createObjectURL(event.target.files[0]);
+  }
+      $(document).ready(function() {
+            $('#clear_button').on('click', function() {
+                $('#image').val('');
+                $('#frame').attr('src',"");
+              });
+          });
+  </script>
+  <style>
+    *{
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+    
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-color: DEB887;
+    background-size:cover;
+    
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.welcome{
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.heading{
+    text-align: center;
+    text-transform: uppercase;
+}
+section div{
+    text-align: center;
+}
+section div button{
+    background-color: gray;
+    width:100px;
+    margin-top: 20px;
+    margin-left: 15px;
+    height: 20px;
+}
+section p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+}
+section form img{
+    border: 1px solid black;
+    background-color:white;
+}
+section {
+    margin-top: 30px;
+}
+section label{
+    margin-left:70px;
+    margin-top: 30px;
+}
+  </style>
+</head>
+<body>
+  <div class="banner">
+  <div class="navbar">
+  <h1 class="welcome">IBM PROJECT</h1>
+  <div id="team_id">TEAM ID : PNT2022TMID11565</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="C:\Users\Anand\Desktop\project in ibm\templates\about.html">about</a></li>
+  </ul>
+  </div>
+  <section id="title">
+    <h4 class="heading">A Novel Method For Handwritten Digit Recognition system</h4>
+    
+    <br><br>
+    <p>
+        MAIN PROJECT 
+    </p>
+      <br>
+  </section>
+  <section id="content">
+        <div >
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+        <label>Select a image:</label>
+        <input id="image" type="file" name="image" accept="image/png, image/jpeg" onchange="preview()"><br><br>
+          <img id="frame" src="" width="100px" height="100px"/>
+          <div class="buttons_div">
+            <button type="submit"  id="predict_button">Predict</button>
+            <button type="button"  id="clear_button">&nbsp Clear &nbsp</button>
+          </div>
+        </form>
+        </div>
+  </section>
+  </div>
+</body>
+</html>

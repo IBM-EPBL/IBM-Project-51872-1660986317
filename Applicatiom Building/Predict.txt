@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+</head>
+
+<style>
+    body{
+     background-color:Tomato;
+     background-repeat: no-repeat;
+     background-size: cover;
+    }
+    #rectangle{
+     width:400px;
+     height:150px;
+     background-color: #5796a5;
+     border-radius: 25px;
+     position:absolute;
+     margin-top: 200px;
+     top:25%;
+     left:50%;
+     transform:translate(-50%,-50%);
+    }
+    #ans{
+      text-align: center;
+      font-size: 40px;
+      margin: 0 auto;
+      padding: 3% 5%;
+      margin-top: 20px;
+      color: white;
+    }
+    
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.welcome{
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.heading{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+</style>
+<body>
+    <div class="banner">
+        <div class="navbar">
+        <h1 class="welcome">IBM PROJECT</h1>
+        <div id="team_id">TEAM ID : PNT2022TMID11565</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="C:\Users\Anand\Desktop\project in ibm\templates\about.html">about</a></li>
+        </ul>
+        </div>
+
+    <div id="rectangle">
+        <h1 id="ans">Predicted Number : {{num}}</h1>
+    </div>
+</body>
+</html>
